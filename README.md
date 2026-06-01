@@ -1,6 +1,6 @@
 # Facet
 
-**The last gate before the spec gets written.** Facet stress-tests your draft design — one sharp question at a time — then hands you a structured brief that feeds directly into openspec or speckit. No chat-scrolling. No "let me summarize."
+**The last gate before the spec gets written.** Facet stress-tests your draft design — one sharp question at a time — then hands you a Facet Brief (or Quick Note) that feeds directly into openspec or speckit. No chat-scrolling. No "let me summarize."
 
 ## Install
 
@@ -14,15 +14,15 @@ npx skills add https://github.com/hondrytravis/skills --skill facet
 
 ## What makes it different
 
-Most design-review skills stop at "shared understanding." Facet goes further with a **structured artifact** — the Facet Brief — that maps onto spec tooling without a translation step.
+Most design-review skills stop at "shared understanding." Facet goes further with **structured artifacts** — the Facet Brief and Facet Quick Note — that map onto spec tooling without a translation step.
 
 | Capability | grill-me | grill-with-docs | brainstorming | **Facet** |
 |---|---|---|---|---|
 | Grill an existing draft | ✅ | ✅ | ❌ | ✅ |
-| Structured SDD output | ❌ | ❌ | ❌ | ✅ |
+| Structured SDD output | ❌ | ❌ | ❌ | ✅ Brief + Quick Note |
 | Silent-failure probing | ❌ | ❌ | ❌ | ✅ |
 | Verify claims against code | partial | partial | ❌ | ✅ |
-| Early exit, resume later | ❌ | ❌ | ❌ | ✅ |
+| Early exit, resume later | ❌ | ❌ | ❌ | ✅ Quick Note |
 | Update project docs | ❌ | ✅ | ❌ | ❌ |
 | Generate design from nothing | ❌ | ❌ | ✅ | ❌ |
 
@@ -31,7 +31,7 @@ Most design-review skills stop at "shared understanding." Facet goes further wit
 ## How it works with openspec
 
 ```
-rough draft  →  facet  →  Facet Brief  →  openspec  →  code
+rough draft  →  facet  →  Facet Brief / Quick Note  →  openspec  →  code
 ```
 
 ### Walkthrough
