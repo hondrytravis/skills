@@ -1,50 +1,54 @@
 # Facet
 
-**The last pressure-test before you write a spec.** Facet grills your draft design — one sharp question at a time — then hands you a tight Facet Brief that maps directly into your SDD tool.
+**The last gate before the spec gets written.** Facet stress-tests your draft design — one sharp question at a time — then hands you a structured brief that feeds directly into openspec or speckit. No chat-scrolling. No "let me summarize."
+
+## Install
 
 ```bash
+# All skills from this repo
 npx skills@latest add hondrytravis/skills
+
+# Just Facet
+npx skills add https://github.com/hondrytravis/skills --skill facet
 ```
 
-## Why Facet
+## What makes it different
 
-Most design-review skills stop at "shared understanding." Facet goes further — it produces a **structured artifact** (Facet Brief) that feeds directly into openspec or speckit. No re-reading chat history. No "let me summarize what we talked about."
-
-What sets Facet apart:
+Most design-review skills stop at "shared understanding." Facet goes further with a **structured artifact** — the Facet Brief — that maps onto spec tooling without a translation step.
 
 | Capability | grill-me | grill-with-docs | brainstorming | **Facet** |
 |---|---|---|---|---|
-| Grill a draft design | ✅ | ✅ | ❌ (generates from scratch) | ✅ |
-| Structured output for SDD | ❌ | ❌ | ❌ (produces a spec) | ✅ **Facet Brief** |
-| Silent failure probing | ❌ | ❌ | ❌ | ✅ |
-| Verify every claim against code | partial | partial | ❌ | ✅ **instant** |
-| Resumable early exit | ❌ | ❌ | ❌ | ✅ **Facet Quick Note** |
-| Update project docs | ❌ | ✅ | ❌ | ❌ (read-only) |
+| Grill an existing draft | ✅ | ✅ | ❌ | ✅ |
+| Structured SDD output | ❌ | ❌ | ❌ | ✅ |
+| Silent-failure probing | ❌ | ❌ | ❌ | ✅ |
+| Verify claims against code | partial | partial | ❌ | ✅ |
+| Early exit, resume later | ❌ | ❌ | ❌ | ✅ |
+| Update project docs | ❌ | ✅ | ❌ | ❌ |
 | Generate design from nothing | ❌ | ❌ | ✅ | ❌ |
 
-> **Facet is not a design generator.** You bring a draft (even 3 sentences). Facet pressure-tests it. brainstorming helps you go 0→1; Facet takes you from 0.7→0.95 before the spec crystallizes.
+> Facet is not a design generator. You bring the draft — even three sentences. Facet takes it from 0.7 to 0.95 before the spec crystallizes.
 
-## Workflow with openspec
+## How it works with openspec
 
 ```
-rough draft → facet → Facet Brief → openspec → code
+rough draft  →  facet  →  Facet Brief  →  openspec  →  code
 ```
 
-### Example
+### Walkthrough
 
-Start with a draft:
+You walk in with a draft:
 
-> "We need a notification system. Users get notified when someone mentions them in a comment. Email + in-app. That's it."
+> *"Notification system. Users get notified on @mentions. Email + in-app. Done."*
 
-Run `facet` (trigger: "facet this plan"). Facet grills:
+Facet grills it, one question at a time:
 
-> *"If the email provider is down for 30 seconds, does the in-app notification still go through? Or does one failure block the other?"*
+> *"If the email provider is down for 30 seconds, does the in-app notification still fire — or does one failure block the other?"*
 
-> *"You said 'mention in a comment' — but the codebase has three comment types: inline review comments, issue comments, and PR thread comments. Which ones trigger notifications?"*
+> *"Three comment types exist in the codebase: inline reviews, issue comments, PR threads. Which ones trigger a notification?"*
 
-> *"Write succeeds, but the notification queue write silently fails — does the comment still appear? Who discovers the missing notification?"*
+> *"Write succeeds but the notification queue write fails silently — does the comment still appear? Who discovers the gap? How soon?"*
 
-After 8-12 rounds, Facet outputs a Brief. Here's how it maps to openspec:
+After 8–12 rounds, Facet hands you a Brief. Drop it into openspec:
 
 ```
 openspec/
@@ -55,14 +59,20 @@ openspec/
 │       └── tasks.md       ← Facet "Next steps"
 ```
 
-The Brief becomes your openspec change in one step — no translation layer, no lost context.
+No synthesis. No re-typing. Brief → spec artifacts in one pass.
 
-## Skill
+## The skill
 
-- **[facet](./skills/facet/SKILL.md)** — Full skill definition. Triggers: "facet", "pressure-test this plan", "stress-test the design".
+- **[facet](./skills/facet/SKILL.md)** — triggers: `facet`, `pressure-test this plan`, `stress-test the design`
 
-## Reference
+## Structure
 
-Each skill lives in `skills/<name>/SKILL.md` and must have a reference in this README and an entry in `.claude-plugin/plugin.json`.
+```
+skills/<name>/SKILL.md          ← English skill (shipped)
+reference/<name>/SKILL.zh.md    ← Chinese original (reference only)
+```
+
+Every skill needs a reference in this README and an entry in `.claude-plugin/plugin.json`.
+
 
 
