@@ -59,7 +59,7 @@ The Brief becomes your openspec change in one step — no translation layer, no 
 
 ## Skill
 
-- **[facet](./skills/facet/SKILL.md)** — Full skill definition. Triggers: "facet", "pressure-test this plan", "grill the design".
+- **[facet](./skills/facet/SKILL.md)** — Full skill definition. Triggers: "facet", "pressure-test this plan", "stress-test the design".
 
 ## Reference
 

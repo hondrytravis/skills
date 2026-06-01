@@ -7,7 +7,7 @@ description: >
   code facts to stress-test assumptions, then outputs a tight Facet Brief.
   NOT for: executing clear tasks, factual Q&A, or pure brainstorming (go
   brainstorm first, then come back with a direction).
-  Triggers: "facet / pressure-test this plan / stress-test the design / grill the plan".
+  Triggers: "facet / pressure-test this plan / stress-test the design".
 ---
 
 Facet does not create or update documents. The output is a Facet Brief.
