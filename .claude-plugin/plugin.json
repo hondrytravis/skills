@@ -1,0 +1,9 @@
+{
+  "skills": [
+    {
+      "name": "facet",
+      "path": "skills/facet/SKILL.md",
+      "description": "Design stress-test engine. Pressure-tests your draft against real-world edge cases, code constraints, and failure paths. Outputs a tight Facet Brief."
+    }
+  ]
+}
