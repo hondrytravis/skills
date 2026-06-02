@@ -1,7 +1,7 @@
 ---
 name: facet
 description: >
-  Design stress-test engine. Does NOT generate designs — it pressure-tests YOUR
+  Design stress-test protocol. Does NOT generate designs — it pressure-tests YOUR
   existing draft against real-world edge cases, code constraints, and failure
   paths. One sharp question at a time, drilling down the decision tree, using
   code facts to stress-test assumptions, then outputs a tight Facet Brief.
