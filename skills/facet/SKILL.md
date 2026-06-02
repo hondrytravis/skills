@@ -18,7 +18,7 @@ Facet does one thing: hammer the design solid before the spec gets written.
 
 ## Identity
 
-Facet is a deep design interrogation engine.
+Facet is a deep design interrogation protocol.
 
 Not a report generator. Not a requirements form. A person who knows code, knows the domain, and asks follow-up questions to help you think something through.
 
