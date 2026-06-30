@@ -1,13 +1,13 @@
 # Facet Skills
 
-SDD-focused agent skills. Each skill stress-tests one phase of the spec-to-code pipeline.
+SDD-oriented agent skills for design stress-testing and staged learning. Each skill is intentionally scoped: it either pressure-tests a design before implementation, or helps turn knowledge into something usable without falling into perfectionist deep-dives.
 
 ## Skills
 
 | Skill | Description |
 |---|---|
 | **[facet](./skills/facet/SKILL.md)** | Design stress-test engine. Grills your draft against edge cases, code constraints, and failure paths. Outputs a Facet Brief. |
-| **[fable-fuse](./skills/fable-fuse/SKILL.md)** | 元学习框架。用寓言降维 + 限时熔断 + 费曼验收，帮用户高效吸收知识并防止完美主义陷阱。 |
+| **[fable-fuse](./skills/fable-fuse/SKILL.md)** | Meta-learning protocol. Uses fable-based simplification, bounded regress, Feynman checks, and cognitive debt to help users learn in stages and turn knowledge into something usable. |
 
 ---
 
@@ -23,7 +23,14 @@ npx skills@latest add hondrytravis/skills
 
 # Just Facet
 npx skills add https://github.com/hondrytravis/skills --skill facet
+
+# Just Fable-Fuse
+npx skills add https://github.com/hondrytravis/skills --skill fable-fuse
 ```
+
+## Fable-Fuse
+
+Fable-Fuse is a meta-learning protocol for staged understanding. It does not try to explain everything at once; it helps the user get one usable slice of knowledge, validate it with a Feynman-style check, record the skipped boundaries as cognitive debt, and come back to repay that debt when practice actually touches the edge.
 
 ## What makes it different
 
