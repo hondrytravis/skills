@@ -4,6 +4,11 @@
       "name": "facet",
       "path": "skills/facet/SKILL.md",
       "description": "Design stress-test engine. Pressure-tests your draft against real-world edge cases, code constraints, and failure paths. Outputs a tight Facet Brief."
+    },
+    {
+      "name": "fable-fuse",
+      "path": "skills/fable-fuse/SKILL.md",
+      "description": "Fable-Fuse 元学习框架。寓言降维 + 限时熔断 + 费曼验收，防止完美主义式深挖和原地打转收益递减。"
     }
   ]
 }

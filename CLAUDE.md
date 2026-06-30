@@ -7,6 +7,7 @@ SDD-focused agent skills. Each skill stress-tests one phase of the spec-to-code 
 ```
 skills/<name>/SKILL.md          ← English skill definition (shipped)
 reference/<name>/SKILL.zh.md    ← Chinese original (reference only, not distributed)
+reference/<name>/RFC_zh.md      ← Chinese RFC / design doc (where applicable)
 ```
 
 ## Adding a skill

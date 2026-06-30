@@ -1,4 +1,17 @@
-# Facet
+# Facet Skills
+
+SDD-focused agent skills. Each skill stress-tests one phase of the spec-to-code pipeline.
+
+## Skills
+
+| Skill | Description |
+|---|---|
+| **[facet](./skills/facet/SKILL.md)** | Design stress-test engine. Grills your draft against edge cases, code constraints, and failure paths. Outputs a Facet Brief. |
+| **[fable-fuse](./skills/fable-fuse/SKILL.md)** | 元学习框架。用寓言降维 + 限时熔断 + 费曼验收，帮用户高效吸收知识并防止完美主义陷阱。 |
+
+---
+
+## Facet
 
 **The last gate before the spec gets written.** Facet stress-tests your draft design — one sharp question at a time — then hands you a Facet Brief (or Quick Note) that feeds directly into openspec or speckit. No chat-scrolling. No "let me summarize."
 
@@ -61,15 +74,12 @@ openspec/
 
 No synthesis. No re-typing. Brief → spec artifacts in one pass.
 
-## The skill
-
-- **[facet](./skills/facet/SKILL.md)** — triggers: `facet`, `pressure-test this plan`, `stress-test the design`
-
 ## Structure
 
 ```
 skills/<name>/SKILL.md          ← English skill (shipped)
 reference/<name>/SKILL.zh.md    ← Chinese original (reference only)
+reference/<name>/RFC_zh.md      ← Chinese RFC (design doc, where applicable)
 ```
 
 Every skill needs a reference in this README and an entry in `.claude-plugin/plugin.json`.
